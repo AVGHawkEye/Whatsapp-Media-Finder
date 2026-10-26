@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_floating_overlay"
+    android:elevation="14dp"
+    android:padding="8dp">
+
+    <!-- Header Drag Bar -->
+    <LinearLayout
+        android:id="@+id/layout_drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:tint="#94A3B8"
+            android:contentDescription="Drag Handle" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="WA Scanner"
+            android:textColor="#F1F5F9"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- Live Performance Metric -->
+        <TextView
+            android:id="@+id/tv_perf_metric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:text="Scan: 0ms"
+            android:textColor="#10B981"
+            android:textSize="9sp"
+            android:fontFamily="monospace" />
+
+        <ImageView
+            android:id="@+id/btn_close_overlay"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:tint="#94A3B8"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Close Overlay" />
+    </LinearLayout>
+
+    <!-- Detection Alert Badge -->
+    <TextView
+        android:id="@+id/tv_detection_badge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#DC2626"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:visibility="gone"
+        android:text="Media spotted" />
+
+    <!-- Speed Slider -->
+    <TextView
+        android:id="@+id/tv_speed_label"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Speed: Medium"
+        android:textColor="#CBD5E1"
+        android:textSize="10sp"
+        android:gravity="center" />
+
+    <SeekBar
+        android:id="@+id/seek_speed"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="80" />
+
+    <!-- Direction Selector Button -->
+    <Button
+        android:id="@+id/btn_toggle_direction"
+        android:layout_width="150dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#1E293B"
+        android:text="SCROLL DOWN ↓"
+        android:textColor="#38BDF8"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:padding="0dp" />
+
+    <!-- Start Auto-Scan / Pause Button -->
+    <LinearLayout
+        android:id="@+id/btn_toggle_scan"
+        android:layout_width="150dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_button_emerald"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/iv_status_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@android:drawable/ic_media_play"
+            android:tint="#FFFFFF"
+            android:contentDescription="Play/Pause" />
+
+        <TextView
+            android:id="@+id/tv_scan_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Start Auto-Scan"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Dedicated SKIP Button (Activated during pause) -->
+    <Button
+        android:id="@+id/btn_skip"
+        android:layout_width="150dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#F59E0B"
+        android:text="NEXT ⏭ (go on)"
+        android:textColor="#0F172A"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:padding="0dp" />
+
+</LinearLayout>

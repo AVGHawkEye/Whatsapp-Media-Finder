@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WhatsApp Media Scanner</string>
+    <string name="accessibility_service_label">WhatsApp Media Scanner Service</string>
+    <string name="accessibility_service_description">Security-isolated scanner restricted to WhatsApp. Detects undownloaded media size strings (MB/KB) and assists directional scrolling.</string>
+</resources>
